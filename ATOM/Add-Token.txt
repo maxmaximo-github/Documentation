@@ -1,0 +1,5 @@
+Para vincular una cuenta de github en atom es necesario ir a la opción Gibhub.
+
+Una vez ahi dar en la liga github.atom.io/login la cual redireccionara a realizar el logeo con las credenciales correspondientes del usuario.
+
+A continuación, copiaremos el toquen que se aparece en la patalla del navegador y regresaremos a atom y agregaremos el token.
