@@ -84,15 +84,15 @@ Paso 4 - Definir las llaves publicas dentro de GitHub
 
 Es necesario ingresar a la cuenta de cada usuario y agregar en la sección correspondiente la llave publica para tener acceso mediante SSH.
 
-![Screenshot](setting.png)
+![Screenshot](./images/setting.png)
 
 Despues ir a la opción "SSH and GPG keys"
 
-![Screenshot](ssh_and_gpg_keys.png)
+![Screenshot](./images/ssh_and_gpg_keys.png)
 
 Presionar el botón "New SSH Key"
 
-![Screenshot](button_new_ssh_key.png)
+![Screenshot](./images/button_new_ssh_key.png)
 
 Y agregar el contenido de la llave publica.
 
