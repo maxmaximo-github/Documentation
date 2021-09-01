@@ -35,6 +35,12 @@ Usuario Secundario
           IdentityFile ~/.ssh/nombre2_llave_id_rsa
 
 
+Aceptar las llaves publicas en el servidor.
+
+`ssh -T git@github.com`
+
+`ssh -T git@github-usuario2`
+
 Paso 3 - Definir las opciones globales y locales en Git
 -----------------------------
 **************
