@@ -1,0 +1,17 @@
+
+apm install linter
+apm install flake8
+apm install linter-flake8
+apm install autocomplete-python
+pip3 install autopep8
+pip install autopep8
+apm install python-autopep8
+apm install script
+apm install atom-file-icons
+apm install atom-material-syntax
+apm install minimap
+apm install minimap-git-diff
+apm install minimap-highlight-selected
+
+
+https://hackernoon.com/setting-up-atom-as-a-python-ide-a-how-to-guide-o6dd37ff
