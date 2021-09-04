@@ -21,7 +21,8 @@ Setup Requirements
 
 
 ***
-Virtual Machine.
+|Virtual Machine.|
+| :---: |
 
 | Virtual Machine 1 | | | |
 | :---: | :---: | :---: | ---: |
@@ -46,3 +47,61 @@ Repeat the procedure “Performing a Manual Installation” to install one more 
 * Set the network configuration to obtain an Ip address automatically.
 * Make sure to keep at least 1 GiB of disk space as unallocated disk space (which is not assignet to any partition) so that you have free space to work on the partitioning exercises in later chapters.
 * Install one server using the Minimal Install pattern, and another server using the Server with GUI installation pattern.
+
+Chapter 2
+---
+Shell
+***
+* The sheel is the default working environment for a Linux administrator. It is the environment where users and administrators enter commands tahta are executed by the operating system.
+* Bash is the mos commond shell.
+
+* The purpose of the Linux shell is to provide an environment in which commands can be executed. The shell makes a distinction between three kinds of commands:
+  * Aliases
+  * Internal commands
+  * External **commands**
+* An **alias** is a command that a user can define as needed. Example:
+`alias newcommand=oldcommand`
+Aliases are executed before anything else.
+
+* An **internal command** is a command that is a part of the shell itsef and, as such, doesn't have to be loaded form disk separately.
+
+* An **external command** is a command that exists as an executable file on the disk of the computer. Because it has to be read rom disk the firs time it is used, it is a bit slower.
+
+Commands
+***
+
+* Tipically, command syntax has three basic parts: the command, its options, and its arguments.
+
+  * Command name.
+  * Options are a part of program code, and they modify what the command is doing.
+  * Argument is the next part of options.
+
+
+| Command | Action |
+| :---: | :--- |
+| ls | List current directories and files
+| type | To find out whether a command is a Bash internal or an executable file on disk|
+| $PATH | This variable defines a list of directories that is searched for matching filename when a user enters a command. |
+| which | To find out which exact command the shell will be using|
+|type| This command will also work on internal commands and aliases|
+|./ | Tell Bash to look for the command in the current directory|
+| time |time run the program COMMAND with any given arguments ARG....  Whe COMMAND finishes, time displays information about resources used by COMMAND (on the standard error output, by default). |
+
+The **$PATH** variable can be set for specific users, but in general, most users will be using the same **$PATH** variable.
+
+I/O Redirection
+---
+By default, when a command is executed, it shows its result on the screen of the computer you are working on. The computer monitor is used as the standar destination for output, whis is also refered to as the **STDOUT**.
+
+Table Standar Input, Output and Error Overview.
+---
+
+| Name | Default Destination | Use in redirection | File Descriptor Number |
+| :---: | :---: | :---: | :---: |
+| STDIN | Computer keyboard | < (same as 0 <) | 0 |
+| STDOUT | Computer monitor | > (same as 1) | 1 |
+| STDERR | Computer monitor | 2> | 2 |
+
+Redirection is also useful if you want to work whit input from an alternative location, such as a file.
+
+A **Devices files** on Linux is a file taht is used to access specific hardware.

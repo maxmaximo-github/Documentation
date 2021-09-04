@@ -108,3 +108,7 @@ Se puede utilizar el comando de more para realizar esta acción.
 
 
 `more ~/.ssh/nombre1_llave_id_rsa.pub`
+
+Asciinema
+
+[![asciicast](https://asciinema.org/a/1C7uEt56JqW6eou4P01OzIdZr.svg)](https://asciinema.org/a/1C7uEt56JqW6eou4P01OzIdZr)

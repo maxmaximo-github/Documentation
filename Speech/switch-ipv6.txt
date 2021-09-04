@@ -1,0 +1,70 @@
+Buenas a todos.
+
+Mi nombre es Cesar Rodriguez y vamos a continuar con la configuración de la topologia IPv6_BasicConfiguration.
+
+En esta ocación vamos a configurar IPv6 en el dispositivo SW2.
+
+Lo primero que vamos a realizar es capturar el trafico entre el enlace Gi0/1 y Gi0/1 del R1 con el programa de Wireshark, 
+
+esto para mostrar los paquetes del protocolo ICMPv6 que comenzaran a transmitir una vez que habilitemos la caracteristica IPv6 en la interface de vlan 1 correspondiente al Switch.
+
+Le indicaremos al SW2 que esta interface se debera de autoconfigurar al recibir un prefijo a traves de los paquetes de router advertisement.
+
+Una vez iniciada la interface el switch 2, esta comenzara a enviar paquetes de Router Solicitecion por todas las interfaces que pertenezcan a la VLAN 1 esto para tratar de encontrar un Router en la subred para poder realizar el proceso de SLAAC.
+
+
+
+
+Posteriormente realizaremos la configuración de la dirección IPv6 en la interface gi0/1 de R1 e iniciaremos esta inteface.
+
+Analizaremos el trafico y veremos como R1 envia los paquetes de Router Advertisments necesarios para que el SW2 pueda realizar la autoconfiguración conociendo el prefijo correspondiente asi como el gateway que le dara salida hacia otras redes.
+
+
+
+Vamos a comenzar
+
+Nos dirigimos al enlace entre SW2 y R1 y iniciaremos el programa de Wireshark dando clic derecho sobre el enlace.
+
+
+Dentro de Wireshark aplicaremos el filtro para visualizar el protocolo icmpv6 con el tipo 133 y 134 que corresponden a los paquetes Router Solicitation y Router Advertisment correspondientemente.
+
+
+
+Iniciaremos abriendo una terminal y nos conectaremos localmente a la consola del SWITCH 2.
+
+Me apoyare del programa TMUX para dividir la terminar y ver la configuración del SW2 como la de R1.
+
+
+Lo primero que realizaremos sera una
+
+
+Una dirección IPv6 global del prefijo 2001:db8:cafe:1::/64 en el dispositivo Switch 2. 
+
+
+
+2001:db8:cafe:1:ec9:1fff:fef9:8001
+
+
+
+En redes IPv4 es necesario especificar el gateway que dara salida hacia internet ya sea ingresandolo manualmente a las configuraciones o a traves de un DHCP.
+
+En dispositivos cisco se utiliza el comando ip default-gateway y la dirección del router que esta adjuntado a esta subred.
+
+En dispositivos que trabajan con IPv6 no es necesario especificar el gateway, ya que este es determinado por el paquete de router advertisment que envia el router adjunto a este link.
+
+De hecho en los dispositivos cisco especificamente no existe un comando tal cual como ipv6 default-router.
+
+Se suele utilizar en algunas ocasiones la ruta por defecto a la red ::/0 seguida de la interface de salida con la dirección del vecino que le dara la salida.
+
+Pero como se puede observar, no es necesario realizar esta acción.
+
+
+
+En proximos videos crearemos un pequeño script de python utilizando la libreria telnetlib para conectarnos por telnet a este dispositivo y así obtener información de este dispositivo para su posterior tratamiento.
+
+
+Mi nombre es Cesar Rodríguez y espero les sirva de ayuda este video.
+
+
+
+Hasta pronto. 
