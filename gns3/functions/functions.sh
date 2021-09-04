@@ -103,6 +103,8 @@ function install_extra_packages() {
     # Install pyshark
     pip3 install pyshark > /dev/null 2>&1;
 
+    sudo snap install gh > /dev/null 2>&1;
+
     return;
 }
 
@@ -287,7 +289,7 @@ function pimp_my_terminal() {
     fc-cache -f
 
 
-    bash -c "$(curl -sLo- https://git.io/vQgMr)" <<< "ALL"
+    bash -c "$(curl -sLo- https://git.io/vQgMr)"
 
     sudo add-apt-repository --yes --update ppa:daniruiz/flat-remix > /dev/null 2>&1;
     sudo apt update > /dev/null 2>&1;

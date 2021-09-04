@@ -51,14 +51,18 @@ function gns3_installation() {
     # Call to function "install_hydrogen"
     install_hydrogen;
 
-    # Call to function "install_zsh"
-    install_zsh;
+
+    # Recorder Terminal
+    record_terminal;
+
 
     # Call to function "pimp_my_terminal"
     pimp_my_terminal;
 
-    # Recorder Terminal
-    record_terminal;
+
+
+    # Call to function "install_zsh"
+    install_zsh;
 
     # Autoremove command
     autoremove_packages;

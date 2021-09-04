@@ -4,7 +4,7 @@
 #: Author               : "Max Maximo" <max.maximo.solutions@gmail.com>
 #: Version              : 1.0
 #: Description          : Automation Install GNS3 on Ubuntu 18.04
-#: Options              : None 
+#: Options              : None
 
 
 ##### Set Main Path for execution of Script
@@ -34,6 +34,8 @@ function main() {
         "##############     VERSION. ${SCRIPT_VERSION}  ####################"$'\n'$'\n'\
         "##############     List of available options    ##############"$'\n'\
 
+    echo $'n'\
+        "This script needs to run like a normal user."$'\n'\
     PS3=$'\n'"Please enter your choice (2 quit): "
 
 
