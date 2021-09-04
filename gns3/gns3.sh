@@ -28,14 +28,13 @@ function main() {
 
     ### Print Installation Screen. ###
     echo $'\n'\
+        "This script needs to run as normal user."$'\n'\
         "###############################################################"$'\n'\
         "##############   GNS3 Installation Script    ##############"$'\n'\
         "###############################################################"$'\n'$'\n'\
         "##############     VERSION. ${SCRIPT_VERSION}  ####################"$'\n'$'\n'\
         "##############     List of available options    ##############"$'\n'\
 
-    echo $'n'\
-        "This script needs to run like a normal user."$'\n'\
     PS3=$'\n'"Please enter your choice (2 quit): "
 
 
