@@ -112,3 +112,6 @@ Se puede utilizar el comando de more para realizar esta acción.
 Asciinema
 
 [![asciicast](https://asciinema.org/a/1C7uEt56JqW6eou4P01OzIdZr.svg)](https://asciinema.org/a/1C7uEt56JqW6eou4P01OzIdZr)
+
+
+https://github.com/maxmaximo-github/Documentation/tree/main/GITHUB/GitHub_Multiple_Accounts

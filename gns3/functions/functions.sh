@@ -290,11 +290,11 @@ function pimp_my_terminal() {
     fc-cache -f
 
 
-    bash -c "$(curl -sLo- https://git.io/vQgMr)"
+    # bash -c "$(curl -sLo- https://git.io/vQgMr)"
 
     sudo add-apt-repository --yes --update ppa:daniruiz/flat-remix > /dev/null 2>&1;
     sudo apt update > /dev/null 2>&1;
-    sudo apt install flat-remix-gnome > /dev/null 2>&1;
+    sudo apt install -y flat-remix-gnome > /dev/null 2>&1;
 
 
     alias ls='ls --color=auto'
