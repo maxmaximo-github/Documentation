@@ -68,6 +68,7 @@ function install_atom() {
     apm install minimap > /dev/null 2>&1;
     apm install minimap-git-diff > /dev/null 2>&1;
     apm install minimap-highlight-selected > /dev/null 2>&1;
+    apm install terminal-plus > /dev/null 2>&1;
 
     return;
 }
