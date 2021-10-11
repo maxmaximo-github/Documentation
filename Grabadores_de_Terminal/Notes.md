@@ -77,6 +77,9 @@ If you're on Ubuntu, you can use `xdotool` to find the WINDOWID
 $ sudo apt-get install xdotool
 $ export WINDOWID=$(xdotool getwindowfocus)
 ```
+> Note:
+Add this line in `.bashrc` or `.zshrc`
+export WINDOWID=$(xdotool getwindowfocus)
 
 
 ### 5. Add git to MD
@@ -88,6 +91,8 @@ Add the next line with image path.
 
 ![gif](./git2.gif)
 
+
+https://github.com/icholy/ttygif/blob/master/README.md#additional-notes
 
 
 

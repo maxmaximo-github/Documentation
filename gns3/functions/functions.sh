@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 
@@ -85,7 +86,7 @@ function install_extra_packages() {
         "libvirt-daemon-system" "bridge-utils" \
         "virt-manager" "virt-viewer" "uml-utilities" \
         "dmg2img" "git" "wget" "libguestfs-tools" \
-        "curl" "vim" "unrar" # libvirt-bin
+        "curl" "vim" "unrar" "libvirt-bin"
         );
 
     # Install extra packages APT
