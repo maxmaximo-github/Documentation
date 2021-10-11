@@ -235,13 +235,13 @@ function install_netmiko() {
 function install_python_version() {
 
     # Install Python 3.8
-    sudo apt -y install python3.8 > /dev/null 2>&1;
+    sudo apt -y install python3 > /dev/null 2>&1;
 
     # Install Python3-pip
     sudo apt -y install python3-pip > /dev/null 2>&1;
 
     # Upgrade Pip
-    python3.8 -m pip install --upgrade pip > /dev/null 2>&1;
+    python3 -m pip install --upgrade pip > /dev/null 2>&1;
 
 
     return;
