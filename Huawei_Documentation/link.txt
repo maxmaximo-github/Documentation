@@ -1,0 +1,8 @@
+Links documentation
+---
+
+https://support.huawei.com/enterprise/en/doc/EDOC1000178178/74e8248d/example-for-configuring-hwtacacs-authentication-accounting-and-authorization
+http://www.techspacekh.com/tacacs-configuration-on-huawei-switch-s5700/
+https://www.youtube.com/watch?v=RwRLGGBl3bQ
+https://techhub.hpe.com/eginfolib/networking/docs/switches/WB/15-18/5998-8152_wb_2920_asg/content/ch08s04.html
+https://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/212178-Configuring-SSH-with-x509-authentication.pdf
