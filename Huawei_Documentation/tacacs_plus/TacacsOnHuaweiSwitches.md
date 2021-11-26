@@ -127,3 +127,15 @@ service = shell {
   ![png](./images/test-applybutton.png)
 
 ### Add Devices
+
+1. Create direction on "Objets" "Address" button on Dashbord.
+
+  ![png](./images/objetsips.png)
+
+2. Press button "Add".
+
+  ![png](./images/addbutton.png)
+
+3. Add "Item Name", "Type", "Network Address".
+
+  ![png](./images/addipaddress.png)
