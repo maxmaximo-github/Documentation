@@ -1,0 +1,40 @@
+####SPAWND####
+id = spawnd {
+  listen = { port = 49 }
+} ##END OF SPAWND
+####GENERAL CONFIGURATION####
+id = tac_plus {
+  ###MANUAL CONFIGURATION START###
+log = accounting_log {
+	destination =  "| /opt/tacacsgui/parser/tacacs_parser.sh accounting"
+	log separator = "|!|"}
+log = authentication_log {
+	destination = "| /opt/tacacsgui/parser/tacacs_parser.sh authentication"
+	log separator = "|!|"}
+log = authorization_log {
+	destination = "| /opt/tacacsgui/parser/tacacs_parser.sh authorization"
+	log separator = "|!|"}
+  ###MANUAL CONFIGURATION END###
+  accounting log = accounting_log
+  authentication log = authentication_log
+  authorization log = authorization_log
+  connection timeout = 600
+  context timeout = 3600
+  password max-attempts = 1
+  password backoff = 1
+  separation tag = "*"
+  skip conflicting groups = yes
+  skip missing groups = yes
+  ####MAVIS GENERAL SETTINGS####
+  user backend = mavis
+  login backend = mavis chpass
+  pap backend = mavis
+  mavis module = external {
+    exec = /opt/tacacsgui/mavis/app.php
+  } #END OF MAVIS GLOBAL SETTINGS
+  ####LIST OF ACL####
+  ####LIST OF DEVICE GROUPS####
+  host = defaultGroup {
+    enable = crypt Delunoal12345
+    welcome banner = "Unauthorized access is prohibited!"
+    motd banner = "Today is a perfect day! Have a nice day!"
