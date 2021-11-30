@@ -6,6 +6,7 @@ SSH Configuration
 user-interface vty 0 4
   authentication-mode aaa
   protocol inbound ssh
+  user privilege level 15
 ```
 
   ![png](./images/linesvty04.png)

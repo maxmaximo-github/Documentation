@@ -1,0 +1,23 @@
+vlan 90
+name test
+interface vlan 90
+ip address 192.168.90.5 255.255.255.0
+interface gigabit0/0/1
+port link-type access
+port default vlan 90
+stelnet server enable
+
+user-interface vty 0 4
+  authentication-mode aaa
+  protocol inbound ssh
+  user privilege level 15
+user-interface vty 0 4
+authentication-mode aaa
+aaa
+local-user admin_test privilege level 15
+local-user admin_test password cipher Delunoal12345
+local-user admin_test service-type ssh terminal
+ssh authentication-type default password
+ssh user admin_test
+ssh user admin_test authentication password
+ssh user admin_test service-type stelnet

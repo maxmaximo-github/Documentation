@@ -1,0 +1,85 @@
+!Software Version V200R010C00SPC600
+#
+sysname test
+#
+vlan batch 90
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+radius-server template default
+#
+hwtacacs-server template tacacsgui-scheme
+ hwtacacs-server authentication 192.168.90.10
+ hwtacacs-server authorization 192.168.90.10
+ hwtacacs-server accounting 192.168.90.10
+ hwtacacs-server shared-key cipher %^%#YdzcTXBXm9$qh\F<7o]+'DO'2+Z$>"yN^#1"|o)T%^%#
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 90
+ name test
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authentication-scheme tacacsgui-scheme
+  authentication-mode hwtacacs local
+ authorization-scheme default
+ authorization-scheme tacacsgui-scheme
+  authorization-mode hwtacacs local
+  authorization-cmd 15 hwtacacs local
+ accounting-scheme default
+ accounting-scheme tacacsgui-scheme
+  accounting-mode hwtacacs
+ recording-scheme tacacsgui-scheme
+  recording-mode hwtacacs tacacsgui-scheme
+ cmd recording-scheme tacacsgui-scheme
+ local-aaa-user password policy administrator
+  password expire 0
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme tacacsgui-scheme
+  accounting-scheme tacacsgui-scheme
+  authorization-scheme tacacsgui-scheme
+  hwtacacs-server tacacsgui-scheme
+ local-user admin privilege level 15
+ local-user admin service-type terminal ssh
+
+interface Vlanif1
+#
+interface Vlanif90
+ ip address 192.168.90.5 255.255.255.0
+
+interface GigabitEthernet0/0/1
+ port link-type access
+ port default vlan 90
+
+interface NULL0
+#
+stelnet server enable
+ssh authentication-type default password
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return

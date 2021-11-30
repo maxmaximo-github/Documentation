@@ -1,0 +1,193 @@
+!Software Version V200R010C00SPC600
+#
+sysname HUAWEI
+#
+vlan batch 90
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+radius-server template default
+#
+rsa peer-public-key test.example.com encoding-type openssh
+ public-key-code begin
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+9D/R58G60nVyynswe7zDrDwyNBfxa5oatc7HU9m/
+  GAaJybAQr+IKzWNyiERSnZP6d2Q6faGF7w0/C1Q0rGkVtTzdGO6C9SIcByuwMI0TQ80BB8LsT8xHRrsW
+  hfSsAPenaS5qKNDHvpZunjPHoQlR+gBjFrHWXnjEHLGrR+q0kSsvvGIJvOA53TWQucFssZYe8bgibzqd
+  BzLbZ2Ye2CfGtqMbMplv0sto+OLu043nDpszH6qlxRlJVuYueus1hd9vyem2K1muxqq5sL9qH0lNfbV9
+  DOQh448GV6iqmrgp1vdlUO0CTGyc7YnYrWMybiPBiRBOxfxXS5cSV3BAqlzaJJ6RoNP3xcC3fVdDYINB
+  Vw80yCjfeMG8r6QGAjFooXeECjJVfSLuohtvL+VuQSh39hBBrhEpYV+Mb8/Abl8GEQSTGje27BGlIH0s
+  nXBTl8MzIXUdBSEmua1QVI/M1F2GEY955Fd3Bfffb53iPucu1nmuiFufIAwK/vchti6QLGlOFG9E2qim
+  WwuBZ5SGqvsPk2Qt/sbgxBq4XAP/RdwhKaLUD460Iue9GxuQYmncTn89we9zY+aG4DbGWO17QFen+K69
+  hS5yglj8TYnqcz7fUinkoMNIPNfMuWwLb8pNJHbEBrmgpr/IfH5SSnMjmzLbwoqR+CtDwKbjd2ZAbgpJ
+  kQ== rsa-key
+ public-key-code end
+peer-public-key end
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 90
+ name test
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ local-aaa-user password policy administrator
+  password expire 0
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user admin password irreversible-cipher $1a$N'Mc>u}"J:$#JYnD_K[};/X|Y&9hz]-ly1`B!BTy*/#n$VO)oT1$
+ local-user admin privilege level 15
+ local-user admin service-type terminal http
+ local-user spiderman password irreversible-cipher $1a$%DMTC>4n;Z$DOzWE=6M+U0k&ePX#/xX\SU3R|WF1S+%>91c0R{U$
+ local-user spiderman privilege level 15
+ local-user spiderman service-type terminal ssh
+#
+interface Vlanif1
+#
+interface Vlanif90
+ ip address 192.168.90.5 255.255.255.0
+#
+interface MEth0/0/1
+#
+interface GigabitEthernet0/0/1
+ port link-type access
+ port default vlan 90
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+#
+interface GigabitEthernet0/0/25
+#
+interface GigabitEthernet0/0/26
+#
+interface GigabitEthernet0/0/27
+#
+interface GigabitEthernet0/0/28
+#
+interface GigabitEthernet0/0/29
+#
+interface GigabitEthernet0/0/30
+#
+interface GigabitEthernet0/0/31
+#
+interface GigabitEthernet0/0/32
+#
+interface GigabitEthernet0/0/33
+#
+interface GigabitEthernet0/0/34
+#
+interface GigabitEthernet0/0/35
+#
+interface GigabitEthernet0/0/36
+#
+interface GigabitEthernet0/0/37
+#
+interface GigabitEthernet0/0/38
+#
+interface GigabitEthernet0/0/39
+#
+interface GigabitEthernet0/0/40
+#
+interface GigabitEthernet0/0/41
+#
+interface GigabitEthernet0/0/42
+#
+interface GigabitEthernet0/0/43
+#
+interface GigabitEthernet0/0/44
+#
+interface GigabitEthernet0/0/45
+#
+interface GigabitEthernet0/0/46
+#
+interface GigabitEthernet0/0/47
+#
+interface GigabitEthernet0/0/48
+#
+interface XGigabitEthernet0/0/1
+#
+interface XGigabitEthernet0/0/2
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+stelnet server enable
+ssh user spiderman
+ssh user spiderman authentication-type rsa
+ssh user spiderman assign rsa-key test.example.com
+ssh user spiderman service-type stelnet
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return
