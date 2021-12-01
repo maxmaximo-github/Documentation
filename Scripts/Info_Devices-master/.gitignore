@@ -1,0 +1,4 @@
+/tmp/*
+/functions/__pycache__/*
+/test*.py
+/mongodb/*

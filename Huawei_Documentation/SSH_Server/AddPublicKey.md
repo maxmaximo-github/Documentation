@@ -2,11 +2,11 @@ Add Public Key of Client to Server (Huawei Switch)
 ---
 
 
-1. Creates Public and Private Keys on Client with a program like Putty, SecureCRT, MobaXterm.
+1. Creates Public and Private Keys on Client with a program like Putty, SecureCRT or MobaXterm.
 
 2. Enter to Huawei Switches.
 
-3. Create Public and Private Keys on Huawei Switches. You use `rsa local-key-pair create` and you need to press `y` to confirm.
+3. Create Public and Private Keys on Huawei Switches. You use `rsa local-key-pair create` and you confirm with press `y` to confirm.
 
   ![png](./images/rsa_create.png)
 
