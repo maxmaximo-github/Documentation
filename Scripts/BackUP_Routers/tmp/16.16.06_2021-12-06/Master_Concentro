@@ -1,0 +1,466 @@
+
+
+Master_Concentro# terminal leng 0 
+Master_Concentro# show running-config 
+Building configuration...
+
+Current configuration : 10787 bytes
+!
+! Last configuration change at 15:58:02 MX Wed Dec 1 2021 by spiderman
+! NVRAM config last updated at 11:40:03 MX Wed Dec 1 2021 by admin
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname Master_Concentro
+!
+enable secret 5 $1$yOQ3$t88yrsNkwJ3s.OXySFboy.
+!
+username admin password 7 11191C01051B1F034A7B79
+username onenetwork privilege 15 secret 5 $1$wZCH$L0p.yB3i6Hnn4lq4r/1JP.
+aaa new-model
+aaa authentication login TacacsAuthorization group tacacs+ local
+aaa authentication enable default group tacacs+ enable
+aaa authorization config-commands
+aaa accounting commands 15 default start-stop group tacacs+
+!
+aaa session-id common
+clock timezone MX -6
+clock summer-time MX recurring
+switch 1 provision ws-c3750-48ts
+system mtu routing 1500
+ip subnet-zero
+ip routing
+ip dhcp excluded-address 172.17.11.1 172.17.11.20
+ip dhcp excluded-address 172.17.8.1 172.17.8.10
+ip dhcp excluded-address 172.17.9.1 172.17.9.10
+ip dhcp excluded-address 172.17.10.1 172.17.10.10
+ip dhcp excluded-address 172.17.8.200
+ip dhcp excluded-address 172.17.8.201
+ip dhcp excluded-address 172.17.8.205
+ip dhcp excluded-address 172.17.8.203
+ip dhcp excluded-address 172.17.8.207
+ip dhcp excluded-address 172.17.8.208
+ip dhcp excluded-address 172.17.8.84
+ip dhcp excluded-address 172.17.8.130
+ip dhcp excluded-address 172.17.8.57
+ip dhcp excluded-address 172.17.8.107
+ip dhcp excluded-address 172.17.8.126
+ip dhcp excluded-address 172.17.8.196
+ip dhcp excluded-address 172.17.8.2
+ip dhcp excluded-address 172.17.8.197
+ip dhcp excluded-address 172.17.8.225
+ip dhcp excluded-address 172.17.8.200 172.17.8.254
+ip dhcp excluded-address 172.17.8.136
+ip dhcp excluded-address 172.17.8.129
+ip dhcp excluded-address 172.17.8.230
+ip dhcp excluded-address 172.17.8.159
+ip dhcp excluded-address 172.17.8.240
+ip dhcp excluded-address 172.17.8.166
+ip dhcp excluded-address 172.17.8.71
+ip dhcp excluded-address 172.17.8.72
+ip dhcp excluded-address 172.17.8.73
+ip dhcp excluded-address 172.17.8.74
+ip dhcp excluded-address 172.17.8.75
+ip dhcp excluded-address 172.17.8.124
+ip dhcp excluded-address 172.17.8.247
+ip dhcp excluded-address 172.17.8.1
+!
+ip dhcp pool VoIP
+   network 172.17.11.0 255.255.255.0
+   default-router 172.17.11.1 
+   option 150 ip 192.168.211.2 
+!
+ip dhcp pool Cajagral
+   network 172.17.8.0 255.255.255.0
+   default-router 172.17.8.1 
+   dns-server 172.16.4.10 172.16.4.20 
+   lease 7
+!
+ip dhcp pool PyLconcentro
+   network 172.17.9.0 255.255.255.0
+   default-router 172.17.9.1 
+   dns-server 172.16.4.10 172.16.4.20 
+!
+ip dhcp pool PyLrecvoz
+   network 172.17.10.0 255.255.255.0
+   default-router 172.17.10.1 
+   dns-server 172.16.4.10 172.16.4.20 
+!
+ip dhcp pool Wifi-Con-1
+   network 172.17.12.0 255.255.255.0
+   default-router 172.17.12.1 
+   dns-server 172.16.4.10 172.16.4.20 
+!
+!
+!
+!
+no errdisable detect cause gbic-invalid
+no file verify auto
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 165
+!
+vlan internal allocation policy ascending
+!
+interface FastEthernet1/0/1
+ description TURISMO
+ switchport access vlan 708
+ spanning-tree portfast
+!
+interface FastEthernet1/0/2
+ description TURISMO
+ switchport access vlan 708
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/0/3
+ description TURISMO
+ switchport access vlan 708
+ spanning-tree portfast
+!
+interface FastEthernet1/0/4
+ description TURISMO
+ switchport access vlan 708
+ spanning-tree portfast
+!
+interface FastEthernet1/0/5
+ description TURISMO
+ switchport access vlan 708
+ spanning-tree portfast
+!
+interface FastEthernet1/0/6
+ description TURISMO
+ switchport access vlan 708
+ spanning-tree portfast
+!
+interface FastEthernet1/0/7
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/8
+ description TURISMO
+ switchport access vlan 708
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/9
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/10
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/11
+ description TURISMO
+ switchport access vlan 708
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/12
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/13
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/14
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/15
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/16
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/17
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/18
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/19
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/20
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/21
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/22
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/23
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/24
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/25
+ description TURISMO
+ switchport access vlan 701
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/26
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/27
+ description CONEXION A SW2_CONCENTRO
+ switchport access vlan 711
+!
+interface FastEthernet1/0/28
+ description TURISMO
+ switchport access vlan 709
+ switchport voice vlan 711
+ spanning-tree portfast
+!
+interface FastEthernet1/0/29
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/30
+ description TURISMO
+ switchport access vlan 712
+ spanning-tree portfast
+!
+interface FastEthernet1/0/31
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+ spanning-tree bpduguard disable
+!
+interface FastEthernet1/0/32
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/33
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/34
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/35
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/36
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/37
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/38
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/39
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/40
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/41
+ description Checador-4c8d IP:1.21
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/42
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/43
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/44
+ description TURISMO
+ switchport access vlan 701
+ spanning-tree portfast
+!
+interface FastEthernet1/0/45
+ description UPS-TelmexConcentro
+ switchport mode access
+!
+interface FastEthernet1/0/46
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/47
+ description TURISMO
+ switchport access vlan 701
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 165
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/48
+ description TURISMO
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/1
+ description ENLACE A CAJAGRAL
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ description Enlace principal
+ switchport access vlan 165
+!
+interface GigabitEthernet1/0/3
+ description CONEXION A RET-GW-01.cisco.com
+ switchport access vlan 165
+ bandwidth 200
+!
+interface GigabitEthernet1/0/4
+ description ENLACE_FBrecPyL
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan165
+ ip address 192.168.165.250 255.255.255.0
+!
+interface Vlan701
+ description Turismo
+ ip address 172.17.1.1 255.255.255.0
+ shutdown
+!
+interface Vlan708
+ ip address 172.17.8.1 255.255.255.0
+!
+interface Vlan709
+ ip address 172.17.9.1 255.255.255.0
+!
+interface Vlan710
+ ip address 172.17.10.1 255.255.255.0
+!
+interface Vlan711
+ description Telefonia
+ ip address 172.17.11.1 255.255.255.0
+ shutdown
+!
+interface Vlan712
+ description WIfi-Con-1
+ ip address 172.17.12.1 255.255.255.0
+ shutdown
+!
+interface Vlan726
+ description Telefonia Padron
+ ip address 172.17.26.1 255.255.255.0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 192.168.165.254
+ip http server
+!
+logging trap debugging
+logging facility mail
+logging 172.16.4.188
+snmp-server community lectura RO
+snmp-server community escritura RW
+snmp-server community snmpcartridge RO
+snmp-server community snmpzap06 RW
+snmp-server location - Edificio de la Direccion Gral. de OP, Site de Telecomunic
+snmp-server contact Departamento de Redes, Direccion de Sistemas, OMA. Ext, 2360
+snmp-server enable traps license
+tacacs-server host 192.168.66.240
+tacacs-server directed-request
+tacacs-server key 7 107A081A0414014042231F0276786164
+radius-server source-ports 1645-1646
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ password 7 0123140B4D02565E70
+ logging synchronous
+ login authentication TacacsAuthorization
+ transport input telnet
+line vty 5 15
+ exec-timeout 0 0
+ privilege level 15
+ password 7 0123140B4D02565E70
+ logging synchronous
+ login authentication TacacsAuthorization
+ transport input telnet
+ transport output telnet
+!
+end
+
+Master_Concentro# exit 

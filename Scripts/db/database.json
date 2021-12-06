@@ -1,0 +1,10 @@
+Seguiridad = [
+  { "VSS_CISZ_CORE": {
+    "version": "15.2",
+    "device_type": "cisco_ios",
+    "ip": "10.20.1.1",
+    "username": "onenetwork",
+    "password": "C1SZ@zapopan.gob.mx"
+    }
+  },
+]

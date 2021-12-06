@@ -6,10 +6,10 @@
 192.168.200.21 ssh cisco
 192.168.200.59 ssh cisco
 192.168.200.80 ssh huawei -- no pude conectarme
-192.168.200.90 ssh  -- no se puede conectar
+192.168.199.90 ssh  -- no se puede conectar
 192.168.200.222 ssh cisco
 192.168.200.110 telnet cisco
-192.168.199.50 telnet huawei -- no se puede conectar
+192.168.199.50 telnet huawei -- no se puede conectar -- 
 192.168.200.39 telnet cisco
 192.168.200.40 telnet cisco
 192.168.200.229 ssh cisco
