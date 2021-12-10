@@ -43,6 +43,7 @@ def ssh_configuration(device):
     
     with open(file=f"{directory}/{hostname}", mode="w") as file:
         file.write(output)
+    print()
 
 
 def telnet_configuration(device):
@@ -100,6 +101,8 @@ def main():
     with ZipFile(file=f"{directory}.zip", mode="w") as zipfile:
         for dir in directory.iterdir():
             zipfile.write(dir)
+
+
 
                 
         

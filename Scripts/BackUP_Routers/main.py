@@ -70,6 +70,8 @@ def main():
         else:
             ssh_configuration(device, date_time)
 
+    print("Hello World")
+
 
 if __name__ == '__main__':
     main()

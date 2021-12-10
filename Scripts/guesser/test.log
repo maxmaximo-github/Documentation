@@ -1,0 +1,764 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0x984528f0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:36:30+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: show version
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system\n'
+DEBUG:netmiko:read_channel: show system
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system info\n'
+DEBUG:netmiko:read_channel: show system info
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'display version\n'
+DEBUG:netmiko:read_channel: display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52X-PWR-SI-AC Routing Switch uptime is 0 week, 0 day, 0 hour, 12 minutes
+
+ES5D2V52S003 0(Master)  : uptime is 0 week, 0 day, 0 hour, 11 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 241        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0110 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+PWR1 information
+Pcb           Version   : PWR VER.A
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x89d32c80
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:43:14+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: show version
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system\n'
+DEBUG:netmiko:read_channel: show system
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system info\n'
+DEBUG:netmiko:read_channel: show system info
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'display version\n'
+DEBUG:netmiko:read_channel: display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52X-PWR-SI-AC Routing Switch uptime is 0 week, 0 day, 0 hour, 19 minutes
+
+ES5D2V52S003 0(Master)  : uptime is 0 week, 0 day, 0 hour, 18 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 241        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0110 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+PWR1 information
+Pcb           Version   : PWR VER.A
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x89d33f40
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:43:34+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <HUAWEI>
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\r\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+<HUAWEI>
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x23662c80
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:46:38+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: show version
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system\n'
+DEBUG:netmiko:read_channel: show system
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system info\n'
+DEBUG:netmiko:read_channel: show system info
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'display version\n'
+DEBUG:netmiko:read_channel: display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52X-PWR-SI-AC Routing Switch uptime is 0 week, 0 day, 0 hour, 23 minutes
+
+ES5D2V52S003 0(Master)  : uptime is 0 week, 0 day, 0 hour, 21 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 241        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0110 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+PWR1 information
+Pcb           Version   : PWR VER.A
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x23663f40
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:46:58+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <HUAWEI>
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\r\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+<HUAWEI>
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xf3d82c80
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:49:10+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: show version
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system\n'
+DEBUG:netmiko:read_channel: show system
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system info\n'
+DEBUG:netmiko:read_channel: show system info
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'display version\n'
+DEBUG:netmiko:read_channel: display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52X-PWR-SI-AC Routing Switch uptime is 0 week, 0 day, 0 hour, 25 minutes
+
+ES5D2V52S003 0(Master)  : uptime is 0 week, 0 day, 0 hour, 24 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 241        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0110 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+PWR1 information
+Pcb           Version   : PWR VER.A
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xf3d83f40
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:49:30+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <HUAWEI>
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\r\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+<HUAWEI>
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xa432c80
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:49:59+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: show version
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system\n'
+DEBUG:netmiko:read_channel: show system
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system info\n'
+DEBUG:netmiko:read_channel: show system info
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'display version\n'
+DEBUG:netmiko:read_channel: display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52X-PWR-SI-AC Routing Switch uptime is 0 week, 0 day, 0 hour, 26 minutes
+
+ES5D2V52S003 0(Master)  : uptime is 0 week, 0 day, 0 hour, 25 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 241        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0110 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+PWR1 information
+Pcb           Version   : PWR VER.A
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xa433f40
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:50:18+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <HUAWEI>
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\r\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+<HUAWEI>
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x83132cb0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:50:30+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show version\n'
+DEBUG:netmiko:read_channel: show version
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system\n'
+DEBUG:netmiko:read_channel: show system
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show system info\n'
+DEBUG:netmiko:read_channel: show system info
+        ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'display version\n'
+DEBUG:netmiko:read_channel: display version
+Huawei Versatile Routing Platform Software
+VRP (R) software, Version 5.170 (S5720 V200R010C00SPC600)
+Copyright (C) 2000-2016 HUAWEI TECH CO., LTD
+HUAWEI S5720-52X-PWR-SI-AC Routing Switch uptime is 0 week, 0 day, 0 hour, 26 minutes
+
+ES5D2V52S003 0(Master)  : uptime is 0 week, 0 day, 0 hour, 25 minutes
+DDR    Memory Size      : 512        M bytes
+FLASH  Memory Size      : 241        M bytes
+Pcb           Version   : VER.B
+BootROM       Version   : 020a.0001
+BootLoad      Version   : 020a.0001
+CPLD          Version   : 0110 
+Software      Version   : VRP (R) Software, Version 5.170 (V200R010C00SPC600)
+PWR1 information
+Pcb           Version   : PWR VER.A
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x83133f70
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-12-09 04:50:50+00:00.
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <HUAWEI>
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:terminal length 0
+                 ^
+Error: Unrecognized command found at '^' position.
+<HUAWEI>
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\r\n'
+DEBUG:netmiko:read_channel: 
+<HUAWEI>
+<HUAWEI>
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x49b2ed40
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x19a2ed10
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.8.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 192.168.90.254: b'61003ec7bc824c5fac5ef94dd4d3ecfe'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:EOF in transport thread
